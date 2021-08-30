@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./gravity.js" defer></script>
+    <script src="./main.js" defer></script>
+
+    <title>G R A V I T Y</title>
+</head>
+
+<body>
+    <div class="settings">
+        <p class="title">Controls</p>
+        <input type="button" value="Pause" id="pauseButton">
+        <input type="button" value="Center" id="centerButton">
+        <p class="title">Zoom</p>
+        <input type="range" min="10" max="100" value="50" id="zoomSlider">
+        <p id="zoomSliderCheck">1.0</p>
+        <p class="title">Timescale</p>
+        <input type="range" min="1" max="100" value="10" id="timescaleSlider">
+        <p id="timescaleSliderCheck">1.0</p>
+        <p class="title">Planet Creator</p>
+        <form id="planetCreator" autocomplete="off">
+            <input type="text" placeholder="Name" id="planetName">
+            <p id="planetNameCheck">Planet</p>
+            <input type="text" placeholder="Mass" id="planetMass">
+            <p id="planetMassCheck">0 kg</p>
+            <input type="text" placeholder="Size" id="planetSize">
+            <p id="planetSizeCheck">0 km</p>
+            <input type="text" placeholder="Hex Color" id="planetColor">
+            <p id="planetColorCheck">0, 0, 0</p>
+            <input type="text" placeholder="Position X" id="planetPosX">
+            <input type="text" placeholder="Position Y" id="planetPosY">
+            <p id="planetPositionCheck">0 km, 0 km</p>
+            <input type="text" placeholder="Velocity X" id="planetVelX">
+            <input type="text" placeholder="Velocity Y" id="planetVelY">
+            <p id="planetVelocityCheck">0 km/s, 0 km/s</p>
+            <input type="submit" value="Create">
+        </form>
+    </div>
+    <div id="screen"></div>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #dddddd;
+    overflow-x: hidden;
+}
+
+body {
+    background: #101010;
+}
+
+#canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    background: #101010;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #101010;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #303030;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #323232;
+}
+
+.settings {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    width: 250px;
+    min-height: calc(100vh - 50px);
+    padding: 25px;
+    z-index: 10;
+    background: #151515f0;
+    display: flex;
+}
+
+.settings input {
+    background: #dddddd;
+    color: #505050;
+    padding: 2px 4px;
+    width: calc(100% - 8px);
+    height: 25px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 4px;
+}
+
+.settings input[type="submit"] {
+    height: 35px;
+    width: 100px;
+    margin-left: calc(100% - 100px);
+}
+
+.settings p {
+    padding: 0 4px;
+    width: calc(100% - 8px);
+    margin-bottom: 12px;
+}
+
+.settings .title {
+    padding: 0;
+    font-size: 20px;
+}
+
+planet {
+    position: fixed;
+    z-index: 1;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px #101010a0;
+}
+
+planet p {
+    cursor: default;
+    opacity: 0;
+    position: fixed;
+    background-color: #202020;
+    text-align: center;
+    width: max-content;
+    padding: 5px 25px;
+    border-radius: 6px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    transition: opacity 0.25s;
+}
+
+planet:hover p {
+    opacity: 1;
+}
+
+planet p::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #202020 transparent transparent transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    .settings {
+        width: calc(100vw - 50px);
+    }
+}
